@@ -1,0 +1,98 @@
+:root {
+  --main-color: #232323;
+  --light-color: #282828;
+  --dark-color: #1e1e1e;
+  --text-color: #f6f5f7;
+  --red: #e81926;
+  --blue: #241b79;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--main-color);
+  color: var(--text-color);
+  font-family: consolas;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  text-transform: uppercase;
+  /* border-radius: 50px; */
+  background: var(--main-color);
+  box-shadow: 30px 30px 60px var(--dark-color),
+    -30px -30px 60px var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transition-delay: 0.1s;
+  background: linear-gradient(145deg, var(--light-color), var(--dark-color));
+  box-shadow: 30px 30px 60px var(--red), -30px -30px 60px var(--blue);
+}
+
+.card span {
+  position: absolute;
+  display: block;
+}
+
+.card span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, var(--red));
+}
+.card:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.card span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, var(--blue));
+}
+.card:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.card span:nth-child(2) {
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(0, transparent, var(--red));
+}
+.card:hover span:nth-child(2) {
+  bottom: 100%;
+  transition: 0.5s;
+}
+
+.card span:nth-child(4) {
+  bottom: 100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--blue));
+}
+.card:hover span:nth-child(4) {
+  bottom: -100%;
+  transition: 0.5s;
+}
