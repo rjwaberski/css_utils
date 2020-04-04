@@ -11,3 +11,7 @@ Fill text aniamtion using `data` attr
 ### 3. Circle progressbar
 
 Simple circle progressbar using svg and css variables
+
+### 4. product card
+
+Product card with hover animations
